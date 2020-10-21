@@ -1,0 +1,74 @@
+Spark Command: /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -cp /opt/spark-2.3.4-bin-hadoop2.7/conf/:/opt/spark-2.3.4-bin-hadoop2.7/jars/* -Xmx1g org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://ee267f3ec850:7077
+========================================
+2020-10-18 09:39:02 INFO  Worker:2612 - Started daemon with process name: 32437@ee267f3ec850
+2020-10-18 09:39:03 INFO  SignalUtils:54 - Registered signal handler for TERM
+2020-10-18 09:39:03 INFO  SignalUtils:54 - Registered signal handler for HUP
+2020-10-18 09:39:03 INFO  SignalUtils:54 - Registered signal handler for INT
+2020-10-18 09:39:04 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2020-10-18 09:39:04 INFO  SecurityManager:54 - Changing view acls to: root
+2020-10-18 09:39:04 INFO  SecurityManager:54 - Changing modify acls to: root
+2020-10-18 09:39:04 INFO  SecurityManager:54 - Changing view acls groups to: 
+2020-10-18 09:39:04 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2020-10-18 09:39:04 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2020-10-18 09:39:04 INFO  Utils:54 - Successfully started service 'sparkWorker' on port 45403.
+2020-10-18 09:39:05 INFO  Worker:54 - Starting Spark worker 172.18.0.2:45403 with 2 cores, 6.3 GB RAM
+2020-10-18 09:39:05 INFO  Worker:54 - Running Spark version 2.3.4
+2020-10-18 09:39:05 INFO  Worker:54 - Spark home: /opt/spark-2.3.4-bin-hadoop2.7
+2020-10-18 09:39:05 INFO  log:192 - Logging initialized @3877ms
+2020-10-18 09:39:05 INFO  Server:351 - jetty-9.3.z-SNAPSHOT, build timestamp: unknown, git hash: unknown
+2020-10-18 09:39:05 INFO  Server:419 - Started @4023ms
+2020-10-18 09:39:05 WARN  Utils:66 - Service 'WorkerUI' could not bind on port 8081. Attempting port 8082.
+2020-10-18 09:39:05 WARN  Utils:66 - Service 'WorkerUI' could not bind on port 8082. Attempting port 8083.
+2020-10-18 09:39:05 WARN  Utils:66 - Service 'WorkerUI' could not bind on port 8083. Attempting port 8084.
+2020-10-18 09:39:05 INFO  AbstractConnector:278 - Started ServerConnector@57bac26b{HTTP/1.1,[http/1.1]}{0.0.0.0:8084}
+2020-10-18 09:39:05 INFO  Utils:54 - Successfully started service 'WorkerUI' on port 8084.
+2020-10-18 09:39:05 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7e6965bb{/logPage,null,AVAILABLE,@Spark}
+2020-10-18 09:39:05 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@6abae750{/logPage/json,null,AVAILABLE,@Spark}
+2020-10-18 09:39:05 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5ddba8df{/,null,AVAILABLE,@Spark}
+2020-10-18 09:39:05 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@43506d28{/json,null,AVAILABLE,@Spark}
+2020-10-18 09:39:05 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7e6d9275{/static,null,AVAILABLE,@Spark}
+2020-10-18 09:39:05 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3fdd6674{/log,null,AVAILABLE,@Spark}
+2020-10-18 09:39:05 INFO  WorkerWebUI:54 - Bound WorkerWebUI to 0.0.0.0, and started at http://ee267f3ec850:8084
+2020-10-18 09:39:05 INFO  Worker:54 - Connecting to master ee267f3ec850:7077...
+2020-10-18 09:39:05 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@37eea570{/metrics/json,null,AVAILABLE,@Spark}
+2020-10-18 09:39:05 INFO  TransportClientFactory:267 - Successfully created connection to ee267f3ec850/172.18.0.2:7077 after 122 ms (0 ms spent in bootstraps)
+2020-10-18 09:39:06 INFO  Worker:54 - Successfully registered with master spark://ee267f3ec850:7077
+2020-10-18 09:41:54 INFO  Worker:54 - Asked to launch executor app-20201018094154-0000/0 for sted-application-1
+2020-10-18 09:41:54 INFO  SecurityManager:54 - Changing view acls to: root
+2020-10-18 09:41:54 INFO  SecurityManager:54 - Changing modify acls to: root
+2020-10-18 09:41:54 INFO  SecurityManager:54 - Changing view acls groups to: 
+2020-10-18 09:41:55 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2020-10-18 09:41:55 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2020-10-18 09:41:55 INFO  ExecutorRunner:54 - Launch command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/opt/spark-2.3.4-bin-hadoop2.7/conf/:/opt/spark-2.3.4-bin-hadoop2.7/jars/*" "-Xmx1024M" "-Dspark.driver.port=37229" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@ee267f3ec850:37229" "--executor-id" "0" "--hostname" "172.18.0.2" "--cores" "2" "--app-id" "app-20201018094154-0000" "--worker-url" "spark://Worker@172.18.0.2:45403"
+2020-10-18 09:45:56 INFO  Worker:54 - Asked to kill executor app-20201018094154-0000/0
+2020-10-18 09:45:56 INFO  ExecutorRunner:54 - Runner thread for executor app-20201018094154-0000/0 interrupted
+2020-10-18 09:45:56 INFO  ExecutorRunner:54 - Killing process!
+2020-10-18 09:45:57 INFO  Worker:54 - Executor app-20201018094154-0000/0 finished with state KILLED exitStatus 143
+2020-10-18 09:45:57 INFO  ExternalShuffleBlockResolver:186 - Application app-20201018094154-0000 removed, cleanupLocalDirs = true
+2020-10-18 09:45:57 INFO  Worker:54 - Cleaning up local directories for application app-20201018094154-0000
+2020-10-18 09:47:53 INFO  Worker:54 - Asked to launch executor app-20201018094753-0001/0 for sted-application-1
+2020-10-18 09:47:54 INFO  SecurityManager:54 - Changing view acls to: root
+2020-10-18 09:47:54 INFO  SecurityManager:54 - Changing modify acls to: root
+2020-10-18 09:47:54 INFO  SecurityManager:54 - Changing view acls groups to: 
+2020-10-18 09:47:54 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2020-10-18 09:47:54 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2020-10-18 09:47:54 INFO  ExecutorRunner:54 - Launch command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/opt/spark-2.3.4-bin-hadoop2.7/conf/:/opt/spark-2.3.4-bin-hadoop2.7/jars/*" "-Xmx1024M" "-Dspark.driver.port=34769" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@ee267f3ec850:34769" "--executor-id" "0" "--hostname" "172.18.0.2" "--cores" "2" "--app-id" "app-20201018094753-0001" "--worker-url" "spark://Worker@172.18.0.2:45403"
+2020-10-18 09:48:09 INFO  Worker:54 - Asked to kill executor app-20201018094753-0001/0
+2020-10-18 09:48:09 INFO  ExecutorRunner:54 - Runner thread for executor app-20201018094753-0001/0 interrupted
+2020-10-18 09:48:09 INFO  ExecutorRunner:54 - Killing process!
+2020-10-18 09:48:10 INFO  Worker:54 - Executor app-20201018094753-0001/0 finished with state KILLED exitStatus 143
+2020-10-18 09:48:10 INFO  ExternalShuffleBlockResolver:186 - Application app-20201018094753-0001 removed, cleanupLocalDirs = true
+2020-10-18 09:48:10 INFO  Worker:54 - Cleaning up local directories for application app-20201018094753-0001
+2020-10-18 09:49:17 INFO  Worker:54 - Asked to launch executor app-20201018094917-0002/0 for sted-application-1
+2020-10-18 09:49:17 INFO  SecurityManager:54 - Changing view acls to: root
+2020-10-18 09:49:17 INFO  SecurityManager:54 - Changing modify acls to: root
+2020-10-18 09:49:17 INFO  SecurityManager:54 - Changing view acls groups to: 
+2020-10-18 09:49:17 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2020-10-18 09:49:17 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+2020-10-18 09:49:17 INFO  ExecutorRunner:54 - Launch command: "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java" "-cp" "/opt/spark-2.3.4-bin-hadoop2.7/conf/:/opt/spark-2.3.4-bin-hadoop2.7/jars/*" "-Xmx1024M" "-Dspark.driver.port=34295" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@ee267f3ec850:34295" "--executor-id" "0" "--hostname" "172.18.0.2" "--cores" "2" "--app-id" "app-20201018094917-0002" "--worker-url" "spark://Worker@172.18.0.2:45403"
+2020-10-18 09:50:42 INFO  Worker:54 - Asked to kill executor app-20201018094917-0002/0
+2020-10-18 09:50:42 INFO  ExecutorRunner:54 - Runner thread for executor app-20201018094917-0002/0 interrupted
+2020-10-18 09:50:42 INFO  ExecutorRunner:54 - Killing process!
+2020-10-18 09:50:42 INFO  Worker:54 - Executor app-20201018094917-0002/0 finished with state KILLED exitStatus 143
+2020-10-18 09:50:42 INFO  ExternalShuffleBlockResolver:186 - Application app-20201018094917-0002 removed, cleanupLocalDirs = true
+2020-10-18 09:50:42 INFO  Worker:54 - Cleaning up local directories for application app-20201018094917-0002

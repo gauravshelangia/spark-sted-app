@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Built-By: seanmurdock
+Created-By: Apache Maven 3.6.3
+Build-Jdk: 1.8.0_265
+Main-Class: com.getsimplex.steptimer.service.WebAppRunner
+
